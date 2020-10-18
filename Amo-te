@@ -1,0 +1,56 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pedido do Otto</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style type="text/css">
+        body{background-color: pink;}
+		
+		h3{
+			font: absolute;
+			text-align: center;
+			font-size: 80px;
+			color: red;
+			outline-style: solid;
+        }
+		.btn{
+			font: absolute;
+			text-align: left;
+			font-size: 300%;
+			color: white;
+			background-color: red;
+			border-radius: 50px;
+		}
+		
+    </style>
+    <script>
+        function accionParaCuandoEllaDigaQueSi(){
+            alert('Eu sabia que diria sim <3 te amo');
+        }
+
+        function mueveElBoton(){
+            width = window.innerWidth;
+            height = window.innerHeight;
+
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.left = newWidth + "px";
+            document.getElementById('btnNo').style.top = newHeight + "px";
+            
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Fernanda vamos namorar?</h3>
+    <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Sim" class="btn"/>
+    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="Não" class="btn"/>
+	<embed src="Theme\tpf.mp3" loop="true" autostart="true" class="player" width="0" right="0" />
+
+</body>
+</html>
